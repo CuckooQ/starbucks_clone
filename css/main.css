@@ -56,8 +56,8 @@ header .sub-menu ul.menu li {
 header .sub-menu ul.menu li::before {
   content: "";
   display: block;
-  width: 1px;
-  height: 12px;
+  inline-size: 1px;
+  block-size: 12px;
   background: #e5e5e5;
   position: absolute;
   top: 0;
@@ -81,14 +81,14 @@ header .sub-menu ul.menu li a:hover {
 }
 
 header .sub-menu .search {
-  height: 34px;
+  block-size: 34px;
   position: relative;
   cursor: pointer;
 }
 
 header .sub-menu .search input {
-  width: 36px;
-  height: inherit;
+  inline-size: 36px;
+  block-size: inherit;
   padding: 4px 10px;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -97,16 +97,16 @@ header .sub-menu .search input {
   background-color: #fff;
   color: #777;
   font-size: 12px;
-  transition: width 0.4s;
+  transition: inline-size .4s;
 }
 
 header .sub-menu .search input:focus {
-  width: 190px;
+  inline-size: 190px;
   border-color: #669900;
 }
 
 header .sub-menu .search .material-icons {
-  height: 24px;
+  block-size: 24px;
   position: absolute;
   top: 0;
   bottom: 0;
