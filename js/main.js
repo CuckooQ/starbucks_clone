@@ -1,7 +1,13 @@
+/* Header Elements */
 const headerEl = document.querySelector("header");
 const searchEl = headerEl.querySelector(".search");
 const searchInputEl = searchEl.querySelector("input");
 const badgesEl = headerEl.querySelector(".badges");
+
+/* Main Elements */
+const mainEl = document.querySelector("main");
+const visualEl = mainEl.querySelector(".visual");
+const fadeEls = visualEl.querySelectorAll(".fade-in");
 
 function openSearchInputEl() {
   searchInputEl.focus();
@@ -31,11 +37,25 @@ function controlBadges() {
   }
 }
 
-function init() {
+function setHeaderEl() {
   searchEl.addEventListener("click", openSearchInputEl);
   searchInputEl.addEventListener("focus", searchfocused);
   searchInputEl.addEventListener("blur", searchblurred);
-  document.addEventListener("scroll", _.throttle(controlBadges, 300))
+  document.addEventListener("scroll", _.throttle(controlBadges, 300));
+}
+
+function setMainEl() {
+  fadeEls.forEach((fadeEl, idx) => {
+    gsap.to(fadeEl, 1, {
+      delay: .7 * (idx + 1),
+      opacity: 1,
+    });
+  });
+}
+
+function init() {
+  setHeaderEl();
+  setMainEl();
 }
 
 init();
