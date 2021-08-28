@@ -16,6 +16,66 @@ a {
   text-decoration: none;
 }
 
+.btn {
+  inline-size: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+
+.btn.btn--brown {
+  color: #592B18;
+  border-color: #592B18;
+}
+
+.btn.btn--brown:hover {
+  color: #fff;
+  background-color: #592B18;
+}
+
+.btn.btn--gold {
+  color: #D9AA8A;
+  border-color: #D9AA8A;
+}
+
+.btn.btn--gold:hover {
+  color: #fff;
+  background-color: #D9AA8A;
+}
+
+.btn.btn--white {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn.btn--white:hover {
+  color: #333;
+  background-color: #fff;
+}
+
 .inner {
   inline-size: 1100px;
   margin: 0 auto;
@@ -28,6 +88,8 @@ header {
   border-bottom: 1px soilid #c8c8c8;
   position: fixed;
   inline-size: 100%;
+  top: 0;
+  z-index: 9;
 }
 
 header>.inner {
@@ -232,3 +294,64 @@ header .badges .badge {
 }
 
 header .badges .badge img {}
+
+/* MAIN */
+main {}
+
+main .visual {
+  margin-top: 120px;
+  background-image: url("../images/visual_bg.jpg");
+  background-position: center;
+  background-attachment: scroll;
+}
+
+main .visual .inner {
+  block-size: 646px;
+}
+
+main .visual .title {
+  position: absolute;
+  top: 88px;
+  left: -10px;
+}
+
+main .visual .title .btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 30px auto 0;
+}
+
+main .visual .cup1.image {
+  position: absolute;
+  bottom: 0;
+  right: -47px;
+}
+
+main .visual .cup1.text {
+  position: absolute;
+  top: 38px;
+  right: 171px;
+}
+
+main .visual .cup2.image {
+  position: absolute;
+  bottom: 0;
+  right: 162px;
+}
+
+main .visual .cup2.text {
+  position: absolute;
+  top: 321px;
+  right: 416px;
+}
+
+main .visual .spoon {
+  position: absolute;
+  bottom: 0;
+  left: 275px;
+}
+
+main .visual .fade-in {
+  opacity: 0;
+}
