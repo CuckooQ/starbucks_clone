@@ -5,7 +5,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
-  height: 3000px;
+  block-size: 3000px;
 }
 
 img {
@@ -27,7 +27,7 @@ header {
   background-color: #f6f5f0;
   border-bottom: 1px soilid #c8c8c8;
   position: fixed;
-  width: 100%;
+  inline-size: 100%;
 }
 
 header>.inner {
