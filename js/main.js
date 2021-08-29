@@ -8,6 +8,9 @@ const badgesEl = headerEl.querySelector(".badges");
 const mainEl = document.querySelector("main");
 const visualEl = mainEl.querySelector(".visual");
 const fadeEls = visualEl.querySelectorAll(".fade-in");
+const noticeEl = mainEl.querySelector(".notice");
+const promotionEl = noticeEl.querySelector(".promotion");
+const promotionToggleEl = noticeEl.querySelector(".toggle-promotion");
 
 function openSearchInputEl() {
   searchInputEl.focus();
@@ -44,13 +47,56 @@ function setHeaderEl() {
   document.addEventListener("scroll", _.throttle(controlBadges, 300));
 }
 
-function setMainEl() {
+function showVisualEl() {
   fadeEls.forEach((fadeEl, idx) => {
     gsap.to(fadeEl, 1, {
       delay: .7 * (idx + 1),
       opacity: 1,
     });
   });
+}
+
+function setNoticeLineSwiper() {
+  new Swiper(".notice .notice-line .swiper-container", {
+    direction: "vertical",
+    autoplay: true,
+    loop: true
+  });
+}
+
+function setNoticePromotionSwiper() {
+  new Swiper(".notice .promotion .swiper-container", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 5000
+    },
+    pagination: {
+      el: ".notice .promotion .swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".promotion .swiper-next",
+      prevEl: ".promotion .swiper-prev"
+    }
+  });
+}
+
+function togglePrmotionEl() {
+  if (promotionEl.classList.contains("hide")) {
+    promotionEl.classList.remove("hide");
+  } else {
+    promotionEl.classList.add("hide");
+  }
+}
+
+function setMainEl() {
+  showVisualEl();
+  setNoticeLineSwiper();
+  setNoticePromotionSwiper();
+  promotionToggleEl.addEventListener("click", togglePrmotionEl);
 }
 
 function init() {

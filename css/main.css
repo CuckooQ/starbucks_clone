@@ -298,6 +298,7 @@ header .badges .badge img {}
 /* MAIN */
 main {}
 
+/* MAIN VISUAL */
 main .visual {
   margin-top: 120px;
   background-image: url("../images/visual_bg.jpg");
@@ -354,4 +355,198 @@ main .visual .spoon {
 
 main .visual .fade-in {
   opacity: 0;
+}
+
+/* MAIN NOTICE */
+main .notice {}
+
+main .notice .notice-line {
+  position: relative;
+}
+
+main .notice .notice-line .bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  inline-size: 50%;
+  block-size: 100%;
+  background-color: #333;
+}
+
+main .notice .notice-line .bg-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  inline-size: 50%;
+  block-size: 100%;
+  background-color: #f6f5ef;
+}
+
+main .notice .notice-line .inner {
+  block-size: 62px;
+  display: flex;
+}
+
+main .notice .notice-line .inner .inner__left {
+  inline-size: 60%;
+  block-size: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .notice .notice-line .inner .inner__left h2 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-inline-end: 20px;
+}
+
+main .notice .notice-line .inner .inner__left .swiper-container {
+  flex-grow: 1;
+  block-size: 62px;
+}
+
+main .notice .notice-line .inner .inner__left .swiper-container .swiper-slide {
+  block-size: 62px;
+  display: flex;
+  align-items: center;
+}
+
+main .notice .notice-line .inner .inner__left .swiper-container .swiper-slide a {
+  color: #fff;
+}
+
+main .notice .notice-line .inner .inner__left .notice-line__more {
+  inline-size: 62px;
+  block-size: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .notice .notice-line .inner .inner__left .notice-line__more>.icon {
+  color: #fff;
+  font-size: 30px;
+}
+
+main .notice .notice-line .inner .inner__right {
+  inline-size: 40%;
+  block-size: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+main .notice .notice-line .inner .inner__right h2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+main .notice .notice-line .inner .inner__right .toggle-promotion {
+  inline-size: 62px;
+  block-size: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+main .notice .notice-line .inner .inner__right .toggle-promotion>.icon {}
+
+main .notice .promotion {
+  block-size: 693px;
+  background-color: #f6f5ef;
+  position: relative;
+  overflow: hidden;
+  transition: block-size .4s;
+}
+
+main .notice .promotion.hide {
+  block-size: 0;
+}
+
+main .notice .promotion .swiper-container {
+  inline-size: calc(819px * 3 + 10px * 2);
+  block-size: 553px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-inline-start: calc(-1 * (819px * 3 + 10px * 2) / 2);
+}
+
+main .notice .promotion .swiper-container .swiper-slide {
+  opacity: .5;
+  transition: opacity 1s;
+  position: relative;
+}
+
+main .notice .promotion .swiper-container .swiper-slide-active {
+  opacity: 1;
+}
+
+main .notice .promotion .swiper-container .swiper-slide .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+main .notice .promotion .swiper-pagination {
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
+
+main .notice .promotion .swiper-pagination .swiper-pagination-bullet {
+  background-image: url("../images/promotion_slide_pager.png");
+  inline-size: 12px;
+  block-size: 12px;
+  margin-inline-end: 6px;
+  outline: none;
+  opacity: 0.1;
+}
+
+main .notice .promotion .swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-inline-end: 0;
+}
+
+main .notice .promotion .swiper-pagination .swiper-pagination-bullet-active {
+  background-image: url("../images/promotion_slide_pager_on.png");
+  background-color: transparent;
+  opacity: 1;
+}
+
+main .notice .promotion .swiper-prev,
+main .notice .promotion .swiper-next {
+  inline-size: 42px;
+  block-size: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+}
+
+main .notice .promotion .swiper-prev:hover,
+main .notice .promotion .swiper-next:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+main .notice .promotion .swiper-prev {
+  left: 50%;
+  margin-inline-start: -400px;
+}
+
+main .notice .promotion .swiper-next {
+  right: 50%;
+  margin-inline-end: -400px;
 }
