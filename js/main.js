@@ -12,7 +12,7 @@ const noticeEl = mainEl.querySelector(".notice");
 const promotionEl = noticeEl.querySelector(".promotion");
 const promotionToggleEl = noticeEl.querySelector(".toggle-promotion");
 const videoEl = mainEl.querySelector(".video");
-const floatingEls = videoEl.querySelectorAll(".floating");
+const floatingEls = mainEl.querySelectorAll(".floating");
 
 function openSearchInputEl() {
   searchInputEl.focus();
