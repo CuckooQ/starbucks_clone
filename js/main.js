@@ -11,6 +11,8 @@ const fadeEls = visualEl.querySelectorAll(".fade-in");
 const noticeEl = mainEl.querySelector(".notice");
 const promotionEl = noticeEl.querySelector(".promotion");
 const promotionToggleEl = noticeEl.querySelector(".toggle-promotion");
+const videoEl = mainEl.querySelector(".video");
+const floatingEls = videoEl.querySelectorAll(".floating");
 
 function openSearchInputEl() {
   searchInputEl.focus();
@@ -92,11 +94,35 @@ function togglePrmotionEl() {
   }
 }
 
+// 범위 랜덤 함수(소수점 2자리까지)
+function random(min, max) {
+  // `.toFixed()`를 통해 반환된 문자 데이터를,
+  // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+}
+
+function setFloatingMotion(el, delay, y) {
+  gsap.to(el, random(1.5, 2.5), {
+    y,
+    repeat: -1,
+    yoyo: true,
+    ease: Power1.easeInOut,
+    delay: random(0, delay)
+  });
+}
+
+function setFloatingMotions() {
+  setFloatingMotion(floatingEls[0], 1, 15);
+  setFloatingMotion(floatingEls[1], .5, 15);
+  setFloatingMotion(floatingEls[2], 1.5, 20);
+}
+
 function setMainEl() {
   showVisualEl();
   setNoticeLineSwiper();
   setNoticePromotionSwiper();
   promotionToggleEl.addEventListener("click", togglePrmotionEl);
+  setFloatingMotions();
 }
 
 function init() {
