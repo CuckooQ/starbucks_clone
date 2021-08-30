@@ -708,3 +708,34 @@ main .reserve-coffee .product {
   inset-block-start: 0;
   inset-inline-end: 0;
 }
+
+/* MAIN PICK-YOUR-FAVORITE */
+main .pick-your-favorite {
+  background-image: url("../images/favorite_bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+main .pick-your-favorite>.inner {
+  padding: 110px 0;
+}
+
+main .pick-your-favorite .text-group {
+  inline-size: 362px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-inline-start: 100px;
+}
+
+main .pick-your-favorite .text-group .title {
+  margin-block-end: 40px;
+}
+
+main .pick-your-favorite .text-group .description {
+  margin-block-end: 40px;
+}
+
+main .pick-your-favorite .more {}
