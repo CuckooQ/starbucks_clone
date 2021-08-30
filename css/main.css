@@ -621,8 +621,8 @@ main .video .video__area::before {
 
 main .video .video__area .player {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -736,4 +736,60 @@ main .pick-your-favorite .text-group .title {
 
 main .pick-your-favorite .text-group .description {
   margin-block-end: 40px;
+}
+
+/* MAIN RESERVE-STORE */
+main .reserve-store {
+  background-image: url("../images/reserve_store_bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+main .reserve-store>.inner {
+  block-size: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .reserve-store .medal {
+  inline-size: 334px;
+  block-size: 334px;
+  perspective: 600px;
+}
+
+main .reserve-store .medal .front,
+main .reserve-store .medal .back {
+  position: absolute;
+  inline-size: 334px;
+  block-size: 334px;
+  perspective: 600px;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+main .reserve-store .medal .front {
+  transform: rotateY(0deg);
+}
+
+main .reserve-store .medal:hover .front {
+  transform: rotateY(180deg);
+}
+
+main .reserve-store .medal .back {
+  transform: rotateY(-180deg);
+}
+
+main .reserve-store .medal .back .btn {
+  position: absolute;
+  inset-block-start: 240px;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  margin: auto;
+}
+
+main .reserve-store .medal:hover .back {
+  transform: rotateY(0deg);
 }
