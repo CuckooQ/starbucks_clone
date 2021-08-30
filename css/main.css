@@ -620,6 +620,14 @@ main .video .video__area::before {
   padding-block-start: 56.25%;
 }
 
+main .video .video__area .player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
 main .video .video__cover {
   background-image: url("../images/video_cover_pattern.png");
   background-color: rgba(0, 0, 0, .3);
