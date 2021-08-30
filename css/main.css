@@ -653,6 +653,7 @@ main .video .video__cover .floating2 {
   inset-inline-start: 150px;
 }
 
+/* MAIN SEASON-PRODUCT */
 main .season-product {
   background-image: url("../images/season_product_bg.jpg");
 }
@@ -679,4 +680,31 @@ main .season-product .text-group .title {
 
 main .season-product .text-group .description {
   margin-block-end: 15px;
+}
+
+/* MAIN RESERVE-COFFEE */
+main .reserve-coffee {
+  background-image: url("../images/reserve_bg.jpg");
+}
+
+main .reserve-coffee>.inner {
+  block-size: 400px;
+}
+
+main .reserve-coffee .reserve-logo {
+  position: absolute;
+  inset-block-start: 110px;
+  inset-inline-start: 0;
+}
+
+main .reserve-coffee .text-group {
+  position: absolute;
+  inset-block-start: 124px;
+  inset-inline-start: 200px;
+}
+
+main .reserve-coffee .product {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
 }
