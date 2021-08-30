@@ -601,3 +601,62 @@ main .rewards .btn-group .btn.gift {
   margin-top: 10px;
   flex-grow: 1;
 }
+
+/* MAIN VIDEO */
+main .video {
+  position: relative;
+  block-size: 700px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+main .video .video__area {
+  inline-size: 1920px;
+  background-color: orange;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(1920px / -2);
+  top: 50%;
+  margin-top: calc(1920px * 9 / 16 / -2);
+}
+
+main .video .video__area::before {
+  content: "";
+  display: block;
+  inline-size: 100%;
+  block-size: 0;
+  padding-top: 56.25%;
+}
+
+main .video .video__cover {
+  background-image: url("../images/video_cover_pattern.png");
+  background-color: rgba(0, 0, 0, .3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+main .video .video__cover .inner {
+  block-size: 700px;
+  background-color: royalblue;
+}
+
+main .video .video__cover .floating1 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+main .video .video__cover .floating2 {
+  position: absolute;
+  top: 350px;
+  left: 150px;
+}
+
+main .video .video__cover .floating3 {
+  position: absolute;
+  bottom: -200px;
+  right: 0;
+}
