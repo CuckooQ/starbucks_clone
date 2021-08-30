@@ -550,3 +550,54 @@ main .notice .promotion .swiper-next {
   right: 50%;
   margin-inline-end: -400px;
 }
+
+/* MAIN REWARDS */
+main .rewards {
+  inline-size: 100%;
+  position: relative;
+}
+
+main .rewards .bg-left {
+  inline-size: 50%;
+  block-size: 100%;
+  background-color: #272727;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main .rewards .bg-right {
+  inline-size: 50%;
+  block-size: 100%;
+  background-color: #D5C798;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main .rewards>.inner {
+  background-image: url("../images/rewards.jpg");
+  height: 241px;
+}
+
+main .rewards .btn-group {
+  inline-size: 250px;
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .rewards .btn-group .btn.sign-up {
+  margin-right: 10px;
+}
+
+main .rewards .btn-group .btn.sign-in {
+  inline-size: 110px;
+}
+
+main .rewards .btn-group .btn.gift {
+  margin-top: 10px;
+  flex-grow: 1;
+}
