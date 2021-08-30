@@ -13,7 +13,10 @@ function onYouTubeIframeAPIReady() {
     playerVars: {
       autoplay: true,
       loop: true,
-      playlist: 'An6LvWQuj_8'
+      playlist: 'An6LvWQuj_8',
+      rel: 0,
+      origin: window.location.href,
+      enablejsapi: 1
     },
     events: {
       onReady: function (event) {
