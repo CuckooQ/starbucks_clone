@@ -85,10 +85,10 @@ a {
 /* HEADER */
 header {
   background-color: #f6f5f0;
-  border-bottom: 1px soilid #c8c8c8;
+  border-block-end: 1px solid #c8c8c8;
   position: fixed;
   inline-size: 100%;
-  top: 0;
+  inset-block-start: 0;
   z-index: 9;
 }
 
@@ -96,20 +96,22 @@ header>.inner {
   block-size: 120px;
 }
 
+/* HEADER LOGO */
 header .logo {
   block-size: 75px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
   margin: auto 0;
 }
 
+/* HEADER SUB-MENU */
 header .sub-menu {
   display: flex;
   position: absolute;
-  top: 10px;
-  right: 0;
+  inset-block-start: 10px;
+  inset-inline-end: 0;
 }
 
 header .sub-menu ul.menu {
@@ -128,8 +130,8 @@ header .sub-menu ul.menu li::before {
   block-size: 12px;
   background: #e5e5e5;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  inset-block-start: 0;
+  inset-block-end: 0;
   margin: auto 0;
 }
 
@@ -176,9 +178,9 @@ header .sub-menu .search input:focus {
 header .sub-menu .search .material-icons {
   block-size: 24px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 5px;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-end: 5px;
   margin: auto 0;
   transition: opacity .4s;
 }
@@ -187,18 +189,17 @@ header .sub-menu .search.focused .material-icons {
   opacity: 0;
 }
 
+/* HEADER MAIN-MENU */
 header .main-menu {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  inset-inline-end: 0;
+  inset-block-end: 0;
   z-index: 1;
 }
 
 header .main-menu .menu {
   display: flex;
 }
-
-header .main-menu .menu .item {}
 
 header .main-menu .menu .item .item__name {
   padding: 10px 20px 34px 20px;
@@ -215,7 +216,7 @@ header .main-menu .menu .item:hover .item__name {
 header .main-menu .menu .item .item__contents {
   position: fixed;
   inline-size: 100%;
-  left: 0;
+  inset-inline-start: 0;
   display: none;
 }
 
@@ -241,8 +242,6 @@ header .main-menu .menu .item .item__contents .contents__menu>ul>li h4 {
   font-size: 14px;
   color: #fff;
 }
-
-header .main-menu .menu .item .item__contents .contents__menu>ul>li ul {}
 
 header .main-menu .menu .item .item__contents .contents__menu>ul>li ul li a {
   display: block;
@@ -278,29 +277,26 @@ header .main-menu .menu .item .item__contents .contents__texture ul li p {
   margin: 4px 0 14px;
 }
 
+/* HEADER BADGES */
 header .badges {
   position: absolute;
-  top: 132px;
-  right: 12px;
+  inset-block-start: 132px;
+  inset-inline-end: 12px;
   transition: opacity .6s;
 }
 
 header .badges .badge {
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 12px;
+  margin-block-end: 12px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
   cursor: pointer;
 }
 
-header .badges .badge img {}
-
 /* MAIN */
-main {}
-
 /* MAIN VISUAL */
 main .visual {
-  margin-top: 120px;
+  margin-block-start: 120px;
   background-image: url("../images/visual_bg.jpg");
   background-position: center;
   background-attachment: scroll;
@@ -312,45 +308,45 @@ main .visual .inner {
 
 main .visual .title {
   position: absolute;
-  top: 88px;
-  left: -10px;
+  inset-block-start: 88px;
+  inset-inline-start: -10px;
 }
 
 main .visual .title .btn {
   position: absolute;
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   margin: 30px auto 0;
 }
 
 main .visual .cup1.image {
   position: absolute;
-  bottom: 0;
-  right: -47px;
+  inset-block-end: 0;
+  inset-inline-end: -47px;
 }
 
 main .visual .cup1.text {
   position: absolute;
-  top: 38px;
-  right: 171px;
+  inset-block-start: 38px;
+  inset-inline-end: 171px;
 }
 
 main .visual .cup2.image {
   position: absolute;
-  bottom: 0;
-  right: 162px;
+  inset-block-end: 0;
+  inset-inline-end: 162px;
 }
 
 main .visual .cup2.text {
   position: absolute;
-  top: 321px;
-  right: 416px;
+  inset-block-start: 321px;
+  inset-inline-end: 416px;
 }
 
 main .visual .spoon {
   position: absolute;
-  bottom: 0;
-  left: 275px;
+  inset-block-end: 0;
+  inset-inline-start: 275px;
 }
 
 main .visual .fade-in {
@@ -358,16 +354,14 @@ main .visual .fade-in {
 }
 
 /* MAIN NOTICE */
-main .notice {}
-
 main .notice .notice-line {
   position: relative;
 }
 
 main .notice .notice-line .bg-left {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   inline-size: 50%;
   block-size: 100%;
   background-color: #333;
@@ -375,8 +369,8 @@ main .notice .notice-line .bg-left {
 
 main .notice .notice-line .bg-right {
   position: absolute;
-  top: 0;
-  right: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
   inline-size: 50%;
   block-size: 100%;
   background-color: #f6f5ef;
@@ -453,8 +447,6 @@ main .notice .notice-line .inner .inner__right .toggle-promotion {
   cursor: pointer;
 }
 
-main .notice .notice-line .inner .inner__right .toggle-promotion>.icon {}
-
 main .notice .promotion {
   block-size: 693px;
   background-color: #f6f5ef;
@@ -471,8 +463,8 @@ main .notice .promotion .swiper-container {
   inline-size: calc(819px * 3 + 10px * 2);
   block-size: 553px;
   position: absolute;
-  top: 40px;
-  left: 50%;
+  inset-block-start: 40px;
+  inset-inline-start: 50%;
   margin-inline-start: calc(-1 * (819px * 3 + 10px * 2) / 2);
 }
 
@@ -488,16 +480,16 @@ main .notice .promotion .swiper-container .swiper-slide-active {
 
 main .notice .promotion .swiper-container .swiper-slide .btn {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   margin: auto;
 }
 
 main .notice .promotion .swiper-pagination {
-  bottom: 40px;
-  left: 0;
-  right: 0;
+  inset-block-end: 40px;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
 }
 
 main .notice .promotion .swiper-pagination .swiper-pagination-bullet {
@@ -526,7 +518,7 @@ main .notice .promotion .swiper-next {
   border: 2px solid #333;
   border-radius: 50%;
   position: absolute;
-  top: 300px;
+  inset-block-start: 300px;
   z-index: 1;
   cursor: pointer;
   display: flex;
@@ -542,12 +534,12 @@ main .notice .promotion .swiper-next:hover {
 }
 
 main .notice .promotion .swiper-prev {
-  left: 50%;
+  inset-inline-start: 50%;
   margin-inline-start: -400px;
 }
 
 main .notice .promotion .swiper-next {
-  right: 50%;
+  inset-inline-end: 50%;
   margin-inline-end: -400px;
 }
 
@@ -562,8 +554,8 @@ main .rewards .bg-left {
   block-size: 100%;
   background-color: #272727;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
 }
 
 main .rewards .bg-right {
@@ -571,26 +563,26 @@ main .rewards .bg-right {
   block-size: 100%;
   background-color: #D5C798;
   position: absolute;
-  top: 0;
-  right: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
 }
 
 main .rewards>.inner {
   background-image: url("../images/rewards.jpg");
-  height: 241px;
+  block-size: 241px;
 }
 
 main .rewards .btn-group {
   inline-size: 250px;
   position: absolute;
-  bottom: 24px;
-  right: 0;
+  inset-block-end: 24px;
+  inset-inline-end: 0;
   display: flex;
   flex-wrap: wrap;
 }
 
 main .rewards .btn-group .btn.sign-up {
-  margin-right: 10px;
+  margin-inline-end: 10px;
 }
 
 main .rewards .btn-group .btn.sign-in {
@@ -598,7 +590,7 @@ main .rewards .btn-group .btn.sign-in {
 }
 
 main .rewards .btn-group .btn.gift {
-  margin-top: 10px;
+  margin-block-start: 10px;
   flex-grow: 1;
 }
 
@@ -614,10 +606,10 @@ main .video .video__area {
   inline-size: 1920px;
   background-color: orange;
   position: absolute;
-  left: 50%;
-  margin-left: calc(1920px / -2);
-  top: 50%;
-  margin-top: calc(1920px * 9 / 16 / -2);
+  inset-inline-start: 50%;
+  margin-inline-start: calc(1920px / -2);
+  inset-block-start: 50%;
+  margin-block-start: calc(1920px * 9 / 16 / -2);
 }
 
 main .video .video__area::before {
@@ -625,15 +617,15 @@ main .video .video__area::before {
   display: block;
   inline-size: 100%;
   block-size: 0;
-  padding-top: 56.25%;
+  padding-block-start: 56.25%;
 }
 
 main .video .video__cover {
   background-image: url("../images/video_cover_pattern.png");
   background-color: rgba(0, 0, 0, .3);
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -644,18 +636,18 @@ main .video .video__cover .inner {
 
 main .video .video__cover .floating1 {
   position: absolute;
-  top: 50px;
-  left: 0;
+  inset-block-start: 50px;
+  inset-inline-start: 0;
 }
 
 main .video .video__cover .floating2 {
   position: absolute;
-  top: 350px;
-  left: 150px;
+  inset-block-start: 350px;
+  inset-inline-start: 150px;
 }
 
 main .video .video__cover .floating3 {
   position: absolute;
-  bottom: -200px;
-  right: 0;
+  inset-block-end: -200px;
+  inset-inline-end: 0;
 }
