@@ -1,9 +1,3 @@
-/* Header Elements */
-const headerEl = document.querySelector("header");
-const searchEl = headerEl.querySelector(".search");
-const searchInputEl = searchEl.querySelector("input");
-const badgesEl = headerEl.querySelector(".badges");
-
 /* Main Elements */
 const mainEl = document.querySelector("main");
 const visualEl = mainEl.querySelector(".visual");
@@ -15,27 +9,8 @@ const videoEl = mainEl.querySelector(".video");
 const floatingEls = mainEl.querySelectorAll(".floating");
 const spyEls = mainEl.querySelectorAll("section.scroll-spy");
 
-/* Footer Elements */
-const footerEl = document.querySelector("footer");
-const copyRightEl = footerEl.querySelector(".copyright");
-const yearEl = copyRightEl.querySelector(".this-year");
-
 /* To-Top Element */
 const toTopEl = document.querySelector("#to-top");
-
-function openSearchInputEl() {
-  searchInputEl.focus();
-}
-
-function searchfocused() {
-  searchEl.classList.add("focused");
-  searchInputEl.setAttribute("placeholder", "통합검색");
-}
-
-function searchblurred() {
-  searchEl.classList.remove("focused");
-  searchInputEl.setAttribute("placeholder", "");
-}
 
 function controlBadges() {
   if (window.scrollY > 500) {
@@ -52,9 +27,6 @@ function controlBadges() {
 }
 
 function setHeaderEl() {
-  searchEl.addEventListener("click", openSearchInputEl);
-  searchInputEl.addEventListener("focus", searchfocused);
-  searchInputEl.addEventListener("blur", searchblurred);
   document.addEventListener("scroll", _.throttle(controlBadges, 300));
 }
 
@@ -161,15 +133,6 @@ function setMainEl() {
   setAwardsSwiper();
 }
 
-function setThisYear() {
-  const year = new Date().getFullYear();
-  yearEl.textContent = year;
-}
-
-function setFooterEl() {
-  setThisYear();
-}
-
 function controlToTopEl() {
   if (window.scrollY > 600) {
     gsap.to(toTopEl, .2, {
@@ -198,7 +161,6 @@ function setToTopEl() {
 function init() {
   setHeaderEl();
   setMainEl();
-  setFooterEl();
   setToTopEl();
 }
 
