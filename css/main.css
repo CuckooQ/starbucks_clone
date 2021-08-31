@@ -878,3 +878,55 @@ main .find-store .text-group .title {
 main .find-store .text-group .description {
   margin-bottom: 20px;
 }
+
+/* MAIN AWARDS */
+main .awards {
+  position: relative;
+  background-color: #272727;
+}
+
+main .awards>.inner {
+  padding: 40px 0;
+}
+
+main .awards .swiper-container {
+  inline-size: 100%;
+  block-size: 40px;
+}
+
+main .awards .swiper-prev,
+main .awards .swiper-next {
+  inline-size: 42px;
+  block-size: 42px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  outline: none;
+  color: #fff;
+  opacity: 30%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  margin: auto 0;
+}
+
+main .awards .swiper-prev {
+  inset-inline-start: -100px;
+}
+
+main .awards .swiper-prev:hover {
+  background-color: #fff;
+  color: #272727;
+}
+
+main .awards .swiper-next {
+  inset-inline-end: -100px;
+}
+
+main .awards .swiper-next:hover {
+  background-color: #fff;
+  color: #272727;
+}
