@@ -130,6 +130,19 @@ function setScrollSpy() {
   });
 }
 
+function setAwardsSwiper() {
+  new Swiper(".awards .swiper-container", {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: true,
+    navigation: {
+      nextEl: ".awards .swiper-next",
+      prevEl: ".awards .swiper-prev"
+    }
+  });
+}
+
 function setMainEl() {
   showVisualEl();
   setNoticeLineSwiper();
@@ -137,6 +150,7 @@ function setMainEl() {
   promotionToggleEl.addEventListener("click", togglePrmotionEl);
   setFloatingMotions();
   setScrollSpy();
+  setAwardsSwiper();
 }
 
 function init() {
