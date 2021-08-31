@@ -173,7 +173,7 @@ header .sub-menu ul.menu li:first-child::before {
 }
 
 header .sub-menu ul.menu li a {
-  font-size: 13x;
+  font-size: 13px;
   padding: 11px 16px;
   display: block;
   color: #656565;
@@ -929,4 +929,93 @@ main .awards .swiper-next {
 main .awards .swiper-next:hover {
   background-color: #fff;
   color: #272727;
+}
+
+/* FOOTER */
+footer {
+  background-color: #272727;
+  border-block-start: 1px solid #333;
+}
+
+footer>.inner {
+  padding: 40px 0 60px 0;
+}
+
+footer .menu {
+  display: flex;
+  justify-content: center;
+}
+
+footer .menu li {
+  position: relative;
+}
+
+footer .menu li::before {
+  content: "";
+  inline-size: 3px;
+  block-size: 3px;
+  background-color: #555;
+  border-radius: 50%;
+  position: absolute;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  margin: auto;
+  inset-inline-end: -1px;
+}
+
+footer .menu li:last-child::before {
+  display: none;
+}
+
+footer .menu li a {
+  display: block;
+  padding: 15px;
+  color: #ccc;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+footer .menu li:first-child a {
+  color: #669900;
+}
+
+footer .btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+footer .btn-group .btn {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+footer .btn-group .btn:last-child {
+  margin-right: 0;
+}
+
+footer .info {
+  margin-top: 30px;
+  text-align: center;
+}
+
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+footer .info span:last-child {
+  margin-right: 0;
+}
+
+footer .copyright {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+footer .logo {
+  margin: 30px auto 0;
 }

@@ -15,6 +15,11 @@ const videoEl = mainEl.querySelector(".video");
 const floatingEls = mainEl.querySelectorAll(".floating");
 const spyEls = mainEl.querySelectorAll("section.scroll-spy");
 
+/* Footer Elements */
+const footerEl = document.querySelector("footer");
+const copyRightEl = footerEl.querySelector(".copyright");
+const yearEl = copyRightEl.querySelector(".this-year");
+
 function openSearchInputEl() {
   searchInputEl.focus();
 }
@@ -153,9 +158,19 @@ function setMainEl() {
   setAwardsSwiper();
 }
 
+function setThisYear() {
+  const year = new Date().getFullYear();
+  yearEl.textContent = year;
+}
+
+function setFooterEl() {
+  setThisYear();
+}
+
 function init() {
   setHeaderEl();
   setMainEl();
+  setFooterEl();
 }
 
 init();
