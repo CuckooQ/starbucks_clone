@@ -839,8 +839,8 @@ main .find-store>.inner {
 
 main .find-store .texture1 {
   position: absolute;
-  top: 0;
-  left: 400px;
+  inset-block-start: 0;
+  inset-inline-start: 400px;
 }
 
 main .find-store .texture2 {
@@ -872,11 +872,11 @@ main .find-store .text-group {
 }
 
 main .find-store .text-group .title {
-  margin-bottom: 20px;
+  margin-block-end: 20px;
 }
 
 main .find-store .text-group .description {
-  margin-bottom: 20px;
+  margin-block-end: 20px;
 }
 
 /* MAIN AWARDS */
@@ -982,38 +982,38 @@ footer .menu li:first-child a {
 footer .btn-group {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-block-start: 20px;
 }
 
 footer .btn-group .btn {
-  margin-right: 10px;
+  margin-inline-end: 10px;
   font-size: 12px;
 }
 
 footer .btn-group .btn:last-child {
-  margin-right: 0;
+  margin-inline-end: 0;
 }
 
 footer .info {
-  margin-top: 30px;
+  margin-block-start: 30px;
   text-align: center;
 }
 
 footer .info span {
-  margin-right: 20px;
+  margin-inline-end: 20px;
   color: #999;
   font-size: 12px;
 }
 
 footer .info span:last-child {
-  margin-right: 0;
+  margin-inline-end: 0;
 }
 
 footer .copyright {
   color: #999;
   font-size: 12px;
   text-align: center;
-  margin-top: 12px;
+  margin-block-start: 12px;
 }
 
 footer .logo {
