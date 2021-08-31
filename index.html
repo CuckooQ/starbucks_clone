@@ -34,6 +34,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
     integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
   <script defer src="./js/main.js"></script>
 
   <title>Starbucks-clone</title>
@@ -705,40 +706,43 @@
         </div>
       </div>
     </section>
-    <section class="season-product">
+    <section class="season-product scroll-spy">
       <div class="inner">
         <img class="floating floating3" src="./images/floating3.png" alt="Coffee bins in a spoon">
-        <img class="product" src="./images/season_product_image.png" alt="ICED COFFEE BLEND">
+        <img class="product back-to-position to-right delay-0" src="./images/season_product_image.png"
+          alt="ICED COFFEE BLEND">
         <div class="text-group">
-          <img class="title" src="./images/season_product_text1.png" alt="상쾌하게 여름을 반겨줄 시즌 원두 아이스 커피 블렌드">
-          <img class="description" src="./images/season_product_text2.png"
+          <img class="title back-to-position to-left delay-1" src="./images/season_product_text1.png"
+            alt="상쾌하게 여름을 반겨줄 시즌 원두 아이스 커피 블렌드">
+          <img class="description back-to-position to-left delay-2" src="./images/season_product_text2.png"
             alt="아프리카와 라틴 아메리카 커피의 블렌드로 시트러스함과 은은한 캐러멜 향을 동시에 느낄 수 있으며, 차갑게 즐길 때 풍미가 더욱 깊어지는 원두입니다.">
-          <div class="more">
+          <div class="more back-to-position to-left delay-3">
             <a class="btn" href="javascipr:void(0)">자세히 보기</a>
           </div>
         </div>
       </div>
     </section>
-    <section class="reserve-coffee">
+    <section class="reserve-coffee scroll-spy">
       <div class="inner">
-        <img class="reserve-logo" src="./images/reserve_logo.png" alt="Reserve Logo">
+        <img class="reserve-logo back-to-position to-right delay-0" src="./images/reserve_logo.png" alt="Reserve Logo">
         <div class="text-group">
-          <img src="./images/reserve_text.png"
+          <img class="description back-to-position to-right delay-1" src="./images/reserve_text.png"
             alt="스타벅스 리저브TM 커피 스타벅스 리저브TM는 진귀하고 이국적이며 우리가 지금껏 만나보지 못한 특별한 프리미엄 커피를 여러분에게 소개해드리는 프로그램입니다.">
-          <div class="more">
+          <div class="more back-to-position to-right delay-2">
             <a class="btn btn--gold" href="javascript:void(0)">자세히 보기</a>
           </div>
         </div>
-        <img class="product" src="./images/reserve_image.png" alt="Reserve Coffee">
+        <img class="product back-to-position to-left delay-3" src="./images/reserve_image.png" alt="Reserve Coffee">
       </div>
     </section>
-    <section class="pick-your-favorite">
+    <section class="pick-your-favorite scroll-spy">
       <div class="inner">
         <div class="text-group">
-          <img class="title" src="./images/favorite_text1.png" alt="PICK YOUR FAVORITE">
-          <img class="description" src="./images/favorite_text2.png"
+          <img class="title back-to-position to-right delay-0" src="./images/favorite_text1.png"
+            alt="PICK YOUR FAVORITE">
+          <img class="description back-to-position to-right delay-1" src="./images/favorite_text2.png"
             alt="다양한 메뉴를 스타벅스에서 즐겨보세요. 스타벅스만의 특별함을 경험할 수 있는 최상의 선택 음료 스타벅스 커피와 완벽한 어울림을 자랑하는 푸드 다양한 시도와 디자인으로 가치를 더하는 상품 소중한 사람에게 마음을 전하는 가장 좋은 방법 스타벅스 카드">
-          <div class="more">
+          <div class="more back-to-position to-right delay-2">
             <a class="btn btn--white" href="javascript:void(0)">자세히 보기</a>
           </div>
         </div>
@@ -754,6 +758,25 @@
             <img src="./images/reserve_store_medal_back.png"
               alt="스타벅스 리저브TM 매장 스타벅스 리저브TM 커피 및 관련 제품을 판매하는 매장을 확인하려면 매장보기를 눌러주세요.">
             <div class="btn">매장안내</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="find-store scroll-spy">
+      <div class="inner">
+        <img class="texture1" src="./images/find_store_texture1.png" alt="Coffee Beans">
+        <img class="texture2" src="./images/find_store_texture2.png" alt="Store Icon">
+        <img class="picture picture1 back-to-position to-right delay-0" src="./images/find_store_picture1.jpg"
+          alt="Store">
+        <img class="picture picture2 back-to-position to-right delay-1" src="./images/find_store_picture2.jpg"
+          alt="Drive Through">
+        <div class="text-group">
+          <img class="title back-to-position to-left delay-0" src="./images/find_store_text1.png"
+            alt="스타벅스를 가까이에서 경험해보세요. 고객님과 가장 가까이 있는 매장을 찾아보세요!">
+          <img class="description back-to-position to-left delay-1" src="./images/find_store_text2.png"
+            alt="차별화된 커피 경험을 누릴 수 있는 리저브TM 매장 다양한 방법으로 편리하게 즐길 수 있는 드라이브 스루 매장 함께해서 더 따듯할 수 있는 지역사회 소통 공간 커뮤니티 매장">
+          <div class="more back-to-position to-left delay-2">
+            <a class="btn" href="javascript:void(0)">매장찾기</a>
           </div>
         </div>
       </div>

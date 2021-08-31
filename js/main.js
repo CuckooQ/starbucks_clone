@@ -13,6 +13,7 @@ const promotionEl = noticeEl.querySelector(".promotion");
 const promotionToggleEl = noticeEl.querySelector(".toggle-promotion");
 const videoEl = mainEl.querySelector(".video");
 const floatingEls = mainEl.querySelectorAll(".floating");
+const spyEls = mainEl.querySelectorAll("section.scroll-spy");
 
 function openSearchInputEl() {
   searchInputEl.focus();
@@ -117,12 +118,25 @@ function setFloatingMotions() {
   setFloatingMotion(floatingEls[2], 1.5, 20);
 }
 
+function setScrollSpy() {
+  spyEls.forEach((spyEl) => {
+    new ScrollMagic
+      .Scene({
+        triggerElement: spyEl,
+        triggerHook: .8
+      })
+      .setClassToggle(spyEl, "show")
+      .addTo(new ScrollMagic.Controller());
+  });
+}
+
 function setMainEl() {
   showVisualEl();
   setNoticeLineSwiper();
   setNoticePromotionSwiper();
   promotionToggleEl.addEventListener("click", togglePrmotionEl);
   setFloatingMotions();
+  setScrollSpy();
 }
 
 function init() {
