@@ -1019,3 +1019,21 @@ footer .copyright {
 footer .logo {
   margin: 30px auto 0;
 }
+
+/* TO TOP */
+#to-top {
+  inline-size: 42px;
+  block-size: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset-inline-end: 30px;
+  inset-block-end: 30px;
+  cursor: pointer;
+  z-index: 9;
+  display: none;
+}
