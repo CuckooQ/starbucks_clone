@@ -20,6 +20,9 @@ const footerEl = document.querySelector("footer");
 const copyRightEl = footerEl.querySelector(".copyright");
 const yearEl = copyRightEl.querySelector(".this-year");
 
+/* To-Top Element */
+const toTopEl = document.querySelector("#to-top");
+
 function openSearchInputEl() {
   searchInputEl.focus();
 }
@@ -167,10 +170,36 @@ function setFooterEl() {
   setThisYear();
 }
 
+function controlToTopEl() {
+  if (window.scrollY > 600) {
+    gsap.to(toTopEl, .2, {
+      x: 0,
+      display: "flex"
+    });
+  } else {
+    gsap.to(toTopEl, .2, {
+      x: 100,
+      display: "none"
+    });
+  }
+}
+
+function goToTop() {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  });
+}
+
+function setToTopEl() {
+  document.addEventListener("scroll", _.throttle(controlToTopEl, 700));
+  toTopEl.addEventListener("click", goToTop);
+}
+
 function init() {
   setHeaderEl();
   setMainEl();
   setFooterEl();
+  setToTopEl();
 }
 
 init();
