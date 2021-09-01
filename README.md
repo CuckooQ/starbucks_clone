@@ -1,6 +1,6 @@
 # Starbucks Clone
 
-[DEMO](https://cuckooq.github.io/starbucks_clone/)
+[DEMO](https://jovial-bohr-b02756.netlify.app)
 
 ## Notes
 * 유투브 영상 연결과 관련해서, Youtube IFrame Player API의 문서에서와 같이 연결했을 때 동작하지 않았다.
