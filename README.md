@@ -1,5 +1,7 @@
 # Starbucks Clone
 
+**패스트캠퍼스 프론트엔드 개발 초격차 패키지 Online 강의 CSS 파트.**
+
 [DEMO](https://jovial-bohr-b02756.netlify.app)
 
 ## Notes
